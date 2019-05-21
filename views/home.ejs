@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>FitLog</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/img/favicon.ico" />
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><img src="/img/bg.png" id="sidebar-img"></div>
+      <div class="list-group list-group-flush">
+        <a href="home" class="list-group-item active">Home</a>
+        <a href="overview" class="list-group-item list-group-item-action bg-light">Overview</a>
+        <a href="exercise" class="list-group-item list-group-item-action bg-light">Exercise Tracker</a>
+        <a href="" class="list-group-item list-group-item-action bg-light">Nutrition Tracker</a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        <div><i class="fas fa-user"></i>&nbsp <%- user.email %></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="options"> Options </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/users/logout"> Logout</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+      <div class="container-fluid"> 
+        <h1 class="mt-4">Home</h1>
+        <p>Welcome to the FitLog exercise and nutrition tracker. <br> In the left sidebar you can navigate to <a href="">Overview</a> to watch your personal dashboard containing information about your exercices and nutrition.</p>
+        <p>You can also find the <a href="">Exercise Tracker</a> and <a href="">Nutrition Tracker</a> on the left sidebar allowing you to add new information.</p>
+        <p>At the moment the "Nutrion Tracker" feature is still in development</p>
+      </div>
+      <div class="container-fluid">
+            <h2 class="mt-5">Exercise</h2>
+            <p>Depending on the type of activity different data can be added that is relevant. Under the exercise tracker you can see all added exercies in a table and can delete any record. </p>
+      </div>
+      <div class="container-fluid">
+            <h2 class="mt-5">Nutrition</h2>
+            <p>In development.</p>     
+      </div>
+    </div>
+  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+</body>
+</html>
